@@ -1,0 +1,247 @@
+<app-loader [isLoading]=isLoading></app-loader>
+
+
+<div class="container mat-elevation-z4">
+    <div class="row ">
+        <div class="col-md-12" style="display: flex;justify-content: center;align-items: center;">
+            <h1>{{client.clientPersonalDto.name}}</h1>
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                <img src="https://img.icons8.com/color/48/000000/add-contact-to-company.png" />
+                My info
+            </h2>
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/email.png" />
+                <strong> Email Address: </strong>{{client.clientPersonalDto.email}}
+            </p>
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/shake-phone.png" />
+                <strong> Phone number: </strong>{{client.clientPersonalDto.phone}}
+            </p>
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/waypoint-map.png" />
+                <strong> Located in: </strong>{{client.clientPersonalDto.district}} / {{client.clientPersonalDto.city}}
+            </p>
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/filled-sent.png" />
+                <strong> Title: </strong>{{client.clientPersonalDto.title}}
+            </p>
+
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/school-building.png" />
+                <strong> Company: </strong>{{client.clientPersonalDto.company}}
+            </p>
+
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/compass--v1.png" />
+                <strong> Address: </strong>{{client.clientPersonalDto.address}}
+            </p>
+
+            <p>
+                <img src="https://img.icons8.com/color/24/000000/head-profile.png" />
+                <strong> Description: </strong>{{client.clientPersonalDto.describeYourself}}
+            </p>
+        </div>
+
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2><img src="https://img.icons8.com/color/48/000000/technical-support.png" />My Social</h2>
+
+   
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <a mat-button id="facebook">
+                <span>
+                    <img src="https://img.icons8.com/color/144/000000/facebook-new.png" />
+                </span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a mat-button id="instagram">
+                <span>
+                    <img src="https://img.icons8.com/fluent/144/000000/instagram-new.png" />
+                </span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a mat-button id="twitter">
+                <span>
+                    <img src="https://img.icons8.com/color/144/000000/twitter--v1.png" />
+                </span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a mat-button id="tiktok">
+                <span>
+                    <img src="https://img.icons8.com/color/144/000000/tiktok--v2.png" />
+                </span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a mat-button id="youtube" href="https://stackoverflow.com/">
+                <span>
+                    <img src="https://img.icons8.com/color/144/000000/youtube-play.png" />
+                </span>
+            </a>
+        </div>
+        <div class="grid-item">
+            <a mat-button id="linkedin" href="https://stackoverflow.com/">
+                <span>
+                    <img src="https://img.icons8.com/color/144/000000/linkedin.png" />
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- 
+<div class="container" id="container">
+    <div class="example-small-box mat-elevation-z4">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"
+                    style="background-image: url('/assets/profilebanner.png');"></div>
+                <mat-card-title>{{client.clientPersonalDto.name}}</mat-card-title>
+                <mat-card-subtitle>{{client.clientPersonalDto.email}}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="/assets/banner.png">
+            <mat-card-content>
+                <p *ngIf='!client.clientPersonalDto.describeYourselfIsHidden'>
+                    {{client.clientPersonalDto.describeYourself}}
+
+                </p>
+
+
+            </mat-card-content>
+
+            <mat-card-actions class="example-mat-actions">
+
+                <a mat-button id="facebook">
+                    <span>
+                        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" />
+                    </span>
+                </a>
+
+                <a mat-button id="instagram">
+                    <span>
+                        <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
+                    </span>
+                </a>
+
+                <a mat-button id="twitter">
+                    <span>
+                        <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" />
+                    </span>
+                </a>
+
+                <a mat-button id="tiktok">
+                    <span>
+                        <img src="https://img.icons8.com/color/48/000000/tiktok--v2.png" />
+                    </span>
+                </a>
+
+                <a mat-button id="youtube" href="https://stackoverflow.com/">
+                    <span>
+                        <img src="https://img.icons8.com/color/48/000000/youtube-play.png" />
+                    </span>
+                </a>
+
+
+                <a mat-button id="linkedin" href="https://stackoverflow.com/">
+                    <span>
+                        <img src="https://img.icons8.com/color/48/000000/linkedin.png" />
+                    </span>
+                </a>
+
+
+
+
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+
+
+
+    <div class="example-small-box mat-elevation-z4">
+        <mat-card class="example-card">
+
+            <img mat-card-image src="/assets/900100.png">
+            <mat-card-content>
+                <h3> <img src="https://img.icons8.com/color/48/000000/compass--v1.png" />City</h3>
+                <p>
+                    {{client.clientPersonalDto.city}}
+                </p>
+                <h3> <img src="https://img.icons8.com/color/48/000000/waypoint-map.png" />District</h3>
+
+                <p>
+                    {{client.clientPersonalDto.district}}
+                </p>
+                <h3><img src="https://img.icons8.com/color/48/000000/add-contact-to-company.png" />Title</h3>
+
+                <p>
+                    {{client.clientPersonalDto.title}}
+                </p>
+
+                <h3> <img src="https://img.icons8.com/color/48/000000/link-company-parent.png" />Company</h3>
+
+                <p>
+                    {{client.clientPersonalDto.company}}
+                </p>
+                <h3> <img src="https://img.icons8.com/color/48/000000/visit.png" />Address</h3>
+
+                <p>
+                    {{client.clientPersonalDto.address}}
+                </p>
+                <h3> <img src="https://img.icons8.com/color/48/000000/shake-phone.png" />Phone</h3>
+
+                <p>
+                    {{client.clientPersonalDto.phone}}
+                </p>
+                <mat-divider style="margin-bottom: 50px;"></mat-divider>
+
+            </mat-card-content>
+
+            <mat-card-actions class="example-mat-actions">
+
+            </mat-card-actions>
+        </mat-card>
+
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+
+    <div class="row" *ngIf='!client.clientPersonalDto.youtubeEmbededURLIsHidden'>
+        <div class="col-md-12">
+            {{client.clientPersonalDto.youtubeEmbededURL}}
+        </div>
+    </div>
+
+</div>

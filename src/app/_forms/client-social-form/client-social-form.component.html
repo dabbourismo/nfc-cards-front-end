@@ -1,0 +1,180 @@
+<form [formGroup]="clientSocialForm" autocomplete="off" *ngIf="clientSocialForm" novalidate
+    (ngSubmit)="onSubmit(clientSocialForm.value)">
+
+    <input type="hidden" formControlName="id">
+    <input type="hidden" formControlName="clientPersonalId">
+
+    <div class="row">
+        <div class="col-md-7">
+
+            <mat-form-field>
+                <input matInput type="text" placeholder="Facebook Url" formControlName="facebookUrl" id="facebookUrl">
+                <mat-error *ngIf="hasError('facebookUrl', 'pattern')">Link is not correct</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="facebookUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Twitter" formControlName="twitterUrl" id="name">
+                <mat-error *ngIf="hasError('twitterUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="twitterUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Tiktok" formControlName="tikTokUrl" id="tikTokUrl">
+                <mat-error *ngIf="hasError('tikTokUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="tikTokUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Slap" formControlName="slapUrl" id="slapUrl">
+                <mat-error *ngIf="hasError('slapUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="slapUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="whatsapp" formControlName="whatsAppUrl" id="whatsAppUrl">
+                <mat-error *ngIf="hasError('whatsAppUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="whatsAppUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Youtube" formControlName="youTubeUrl" id="youTubeUrl">
+                <mat-error *ngIf="hasError('youTubeUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="youTubeUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Instagram" formControlName="instagramUrl" id="instagramUrl">
+                <mat-error *ngIf="hasError('instagramUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="instagramUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="LinkedIn" formControlName="linkedInUrl" id="linkedInUrl">
+                <mat-error *ngIf="hasError('linkedInUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="linkedInUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Google Maps" formControlName="googleMapsUrl"
+                    id="googleMapsUrl">
+                    <mat-error *ngIf="hasError('googleMapsUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="googleMapsUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Telegram" formControlName="telegramUrl" id="telegramUrl">
+                <mat-error *ngIf="hasError('telegramUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="telegramUrlFLyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Clubhouse" formControlName="clubhoseUrl" id="clubhoseUrl">
+                <mat-error *ngIf="hasError('clubhoseUrl', 'pattern')">Link is not correct</mat-error>
+
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5">
+            <mat-slide-toggle formControlName="clubhouseUrlFlyOn">Fly on</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="button">
+        <button type="submit" mat-flat-button color="primary" [disabled]="!clientSocialForm.valid"
+            mat-button>Save</button>
+    </div>
+
+
+
+
+</form>

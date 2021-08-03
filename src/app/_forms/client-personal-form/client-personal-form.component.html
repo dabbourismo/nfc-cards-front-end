@@ -1,0 +1,218 @@
+<form [formGroup]="clientPersonalForm" autocomplete="off" *ngIf="clientPersonalForm" novalidate
+    (ngSubmit)="onSubmit(clientPersonalForm.value)">
+
+    <input type="hidden" formControlName="id">
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <mat-form-field>
+                <input matInput type="text" placeholder="Username" formControlName="userName" id="userName">
+                <mat-error *ngIf="hasError('userName', 'required')">This field is required</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+            <mat-form-field>
+                <input matInput type="text" placeholder="password" formControlName="password" id="userName">
+                <mat-error *ngIf="hasError('password', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('password', 'minLength')">Password must be at least 5 characters</mat-error>
+            </mat-form-field>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your name" formControlName="name" id="name">
+                <mat-error *ngIf="hasError('name', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('name', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="nameIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your email" formControlName="email" id="email">
+                <mat-error *ngIf="hasError('email', 'email')">Email is not correct</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="emailIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your city" formControlName="city" id="city">
+                <mat-error *ngIf="hasError('city', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('city', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="cityIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your district" formControlName="district" id="district">
+                <mat-error *ngIf="hasError('district', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('district', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="districtIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your title" formControlName="title" id="title">
+                <mat-error *ngIf="hasError('title', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('title', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="titleIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your company" formControlName="company" id="company">
+                <mat-error *ngIf="hasError('company', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('company', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="companyIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your address" formControlName="address" id="address">
+                <mat-error *ngIf="hasError('address', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('address', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="addressIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Your phone" formControlName="phone" id="phone">
+                <mat-error *ngIf="hasError('phone', 'pattern')">Phone number is not correct</mat-error>
+                <mat-error *ngIf="hasError('phone', 'maxlength')">can't be more than 200 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="phoneIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8">
+            <mat-form-field>
+                <textarea matInput type="text" placeholder="Describe yourself" formControlName="describeYourself"
+                    id="describeYourself">
+                </textarea>
+                <mat-error *ngIf="hasError('describeYourself', 'required')">This field is required</mat-error>
+                <mat-error *ngIf="hasError('describeYourself', 'maxlength')">can't be more than 300 letters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4 col-sm-4">
+            <mat-slide-toggle formControlName="describeYourselfIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <mat-form-field>
+                <input matInput type="text" placeholder="Youtube Embeded Url" formControlName="youtubeEmbededURL"
+                    id="youtubeEmbededURL">
+                <mat-error *ngIf="hasError('youtubeEmbededURL', 'pattern')">Youtube link is not correct</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-4">
+            <mat-slide-toggle formControlName="youtubeEmbededURLIsHidden">Hidden</mat-slide-toggle>
+        </div>
+    </div>
+
+    <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <mat-label>Upload File</mat-label>
+                <input type="file" #file accept="application/pdf" (change)="selectPdfFile(file.files)">
+            </div>
+            <div class="col-md-4">
+                <span class="upload" *ngIf="progress > 0">
+                    {{progress}}%
+                </span>
+                <span class="upload" *ngIf="message">
+                    {{message}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3">
+                <mat-label>Upload Profile Photo</mat-label>
+                <input type="file" #file2 accept=".jpg" id="fileUploader" (change)="selectImage(file2.files)">
+            </div>
+            <div class="col-md-4">
+                <span class="upload" *ngIf="progress > 0">
+                    {{progress}}%
+                </span>
+                <span class="upload" *ngIf="message">
+                    {{message}}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="button">
+        <button type="submit" mat-flat-button color="primary" [disabled]="!clientPersonalForm.valid"
+            mat-button>Save</button>
+    </div>
+
+
+
+
+</form>
